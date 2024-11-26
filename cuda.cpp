@@ -2,6 +2,7 @@
 # <include cuda_runtime.sh> // vector addition ,each vector has 1024 elements , let say if you consider ampere architecture this is not possible with 2048 threads.
 
 #define SIZE 1024;
+    // define SIZE 1024*432*1024;
 
 __global_ void vectorAdd(int* A, int* B, int* C, int n) // this method will be called by GPU
 {
@@ -34,6 +35,7 @@ cudaMemCpy(d_B,B,size,cudaMemCpyHostToDevice);
 vectorAdd << <1,1024 >> > (d_A,d_b, d_C); // Ampere architecuture doesn't allow 2048 threads, let say we are talking vector have 1024 elements.
 //vectorAdd << <2,1024 >> > (d_A,d_b, d_C);   //if we are doing the vector additon with 2048 elements, and ampere acrchitecture doesnt allow 2048 thread 
     // we need to increase the blocks from 1 to 2. so it woulbe <2,1024 >> .
+    // vectorAdd << <1024*432,1024 >> > (d_A,d_b, d_C); // if the size is more than 2048 
 
 cudaMemCpy(C, d_C, size, cudaMemcpyDeviceToHost); // once the vector addition is completed, copying from GPU to CPU
 
