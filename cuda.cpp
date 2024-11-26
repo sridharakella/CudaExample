@@ -1,5 +1,5 @@
 # <include stdio.h>
-# <include cuda_runtime.sh> // vector addition ,each vector has 1024 elements
+# <include cuda_runtime.sh> // vector addition ,each vector has 1024 elements , let say if you consider ampere architecture this is not possible with 2048 threads.
 
 #define SIZE 1024;
 
@@ -31,7 +31,7 @@ for (int i=0 i<size; i++)
 cudaMemCpy(d_A,A,size,cudaMemCpyHostToDevice); // cudamemcpy Host is CPU and device is GPU
 cudaMemCpy(d_B,B,size,cudaMemCpyHostToDevice); 
 
-vectorAdd << <1,1024 >> > (d_A,d_b, d_C)
+vectorAdd << <1,1024 >> > (d_A,d_b, d_C); // Ampere architecuture doesn't allow 2048 threads, let say we are talking vector have 1024 elements.
 
 cudaMemCpy(C, d_C, size, cudaMemcpyDeviceToHost); // once the vector addition is completed, copying from GPU to CPU
 
