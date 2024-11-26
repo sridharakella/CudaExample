@@ -1,5 +1,7 @@
 #include <studio.h>
 
+// nvcc -o runtime DeviceCount.cu
+
 int main()
 {
     int nDevices();
