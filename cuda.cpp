@@ -32,6 +32,8 @@ cudaMemCpy(d_A,A,size,cudaMemCpyHostToDevice); // cudamemcpy Host is CPU and dev
 cudaMemCpy(d_B,B,size,cudaMemCpyHostToDevice); 
 
 vectorAdd << <1,1024 >> > (d_A,d_b, d_C); // Ampere architecuture doesn't allow 2048 threads, let say we are talking vector have 1024 elements.
+//vectorAdd << <2,1024 >> > (d_A,d_b, d_C);   //if we are doing the vector additon with 2048 elements, and ampere acrchitecture doesnt allow 2048 thread 
+    // we need to increase the blocks from 1 to 2. so it woulbe <2,1024 >> .
 
 cudaMemCpy(C, d_C, size, cudaMemcpyDeviceToHost); // once the vector addition is completed, copying from GPU to CPU
 
