@@ -1,5 +1,5 @@
 # <include stdio.h>
-# <include cuda_runtime.sh> // vector addition
+# <include cuda_runtime.sh> // vector addition ,each vector has 1024 elements
 
 #define SIZE 1024;
 
