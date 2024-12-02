@@ -68,7 +68,7 @@ Occupancy =warps used in the kernel/ total warps of SM's
 NVIDA A100  32 max thread blocks
 64 max wraps /SM
 
-A100 compute capability 
+A100 compute capability , architecture diagram, comparsion, ( no of cycles executed for FADD etc)
 https://images.nvidia.com/aem-dam/en-zz/Solutions/data-center/nvidia-ampere-architecture-whitepaper.pdf
 
 
