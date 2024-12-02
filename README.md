@@ -13,12 +13,12 @@ Slurm (slurmctld is installed on master , slurmd is installed on compute node, s
 Slurm entties:
 Nodes, Patitions , Jobs and Jobs steps.
 
-scontrol(only executed root user, slurm state).\n
-sinfo(state of partitions, and nodes managed from slurm, has filtering, sorting) \n
-squeue( heavinly used, reports the jobs in priortiy order) \n
-scancel( to cancel the ) \n
-sacct( used for accounting information, about completed jobs)
-srun/sbatch( to submit the jobs for later execution)
+scontrol(only executed root user, slurm state).< br / >
+sinfo(state of partitions, and nodes managed from slurm, has filtering, sorting) < br / >
+squeue( heavinly used, reports the jobs in priortiy order) < br / >
+scancel( to cancel the ) < br / >
+sacct( used for accounting information, about completed jobs) < br / >
+srun/sbatch( to submit the jobs for later execution) < br / >
 
 
 
@@ -26,12 +26,15 @@ srun/sbatch( to submit the jobs for later execution)
 #SBATCH --job-name=parallel_sum
 #SBATCH --output=job_output.txt
 #SBATCH --nodes=1
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=28
+#SBATCH --ntasks=32( it rewuest 32 MPI processes)
+#SBATCH --ntasks-per-node= 16 MPI per node)
+#SBATCH --cpus-per-task=28  
 #SBATCH --time=01:20:00
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=tntech.edu
 #SBATCH --account=ipdc-2018
+module load opempi
+
 cd /home/CAE/sridhar
 ./parallel_sum
 
