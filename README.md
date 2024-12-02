@@ -61,6 +61,9 @@ https://www.techpowerup.com/gpu-specs/geforce-rtx-3090.c3622
 on Demand GPU: https://docs.lambdalabs.com/public-cloud/
 on Demand https://cloud.vast.ai/
 
+Cuda Runtime API - cudaDeviceCount() get maximum memory bandwidth.
+nvdia-smi
+
 
 
 
