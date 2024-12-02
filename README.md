@@ -6,6 +6,9 @@ Portable Batch System (PBS) and the Simple Linux Utility for Resource Management
 sample PBS 
 qsub(queuesubmit) qstat, qdel, qalter
 
+openMP( open multiprocessor) shared mutiprocessing in c++, forton etc.
+#include <omp.h>
+
 
 
 Slurm (slurmctld is installed on master , slurmd is installed on compute node, slurmd for database deamon)
@@ -41,12 +44,12 @@ cd /home/CAE/sridhar
 
 Performance measure for GPU:
 
-
 Throughput-    calculated the number of floating points for second
 
 Clock speed  ( sometimes higher clock speed doesn't mean it is good, it takes more power consumption).
 
 Hopper architecture ( needs cuda version atleast  cuda 11.8 toolkit)
+
 https://developer.nvidia.com/cuda-gpus
 
 https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#compute-capability-5-x
