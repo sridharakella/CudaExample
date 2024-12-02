@@ -64,6 +64,7 @@ on Demand https://cloud.vast.ai/
 Cuda Runtime API - cudaDeviceCount() get maximum memory bandwidth.
 nvdia-smi
 
+Occupancy =warps used in the kernel/ total warps of SM's
 
 
 
