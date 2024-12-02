@@ -6,7 +6,21 @@ Portable Batch System (PBS) and the Simple Linux Utility for Resource Management
 sample PBS 
 qsub(queuesubmit) qstat, qdel, qalter
 
-Slurm
+
+
+Slurm (slurmctld is installed on master , slurmd is installed on compute node, slurmd for database deamon)
+
+Slurm entties:
+Nodes, Patitions , Jobs and Jobs steps.
+
+scontrol(only executed root user, slurm state).
+sinfo(state of partitions, and nodes managed from slurm, has filtering, sorting)
+squeue( heavinly used, reports the jobs in priortiy order)
+scancel( to cancel the )
+sacct( used for accounting information, about completed jobs)
+srun/sbatch( to submit the jobs for later execution)
+
+
 
 #!/bin/bash
 #SBATCH --job-name=parallel_sum
@@ -24,10 +38,10 @@ cd /home/CAE/sridhar
 
 Performance measure for GPU:
 
-Throughput-calculated the number of floating points for second
 
+Throughput-    calculated the number of floating points for second
 
-Clock speed( sometimes higher clock speed doesn't mean it is good, it takes more power consumption).
+Clock speed  ( sometimes higher clock speed doesn't mean it is good, it takes more power consumption).
 
 Hopper architecture ( needs cuda version atleast  cuda 11.8 toolkit)
 https://developer.nvidia.com/cuda-gpus
