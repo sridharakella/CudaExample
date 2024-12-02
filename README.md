@@ -65,6 +65,8 @@ Cuda Runtime API - cudaDeviceCount() get maximum memory bandwidth.
 nvdia-smi
 
 Occupancy =warps used in the kernel/ total warps of SM's
+NVIDA A100  32 max thread blocks
+64 max wraps /SM
 
 
 
