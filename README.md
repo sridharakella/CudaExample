@@ -13,10 +13,10 @@ Slurm (slurmctld is installed on master , slurmd is installed on compute node, s
 Slurm entties:
 Nodes, Patitions , Jobs and Jobs steps.
 
-scontrol(only executed root user, slurm state).
-sinfo(state of partitions, and nodes managed from slurm, has filtering, sorting)
-squeue( heavinly used, reports the jobs in priortiy order)
-scancel( to cancel the )
+scontrol(only executed root user, slurm state).\n
+sinfo(state of partitions, and nodes managed from slurm, has filtering, sorting) \n
+squeue( heavinly used, reports the jobs in priortiy order) \n
+scancel( to cancel the ) \n
 sacct( used for accounting information, about completed jobs)
 srun/sbatch( to submit the jobs for later execution)
 
