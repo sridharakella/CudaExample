@@ -48,7 +48,7 @@ Throughput-    calculated the number of floating points for second
 
 Clock speed  ( sometimes higher clock speed doesn't mean it is good, it takes more power consumption).
 
-Hopper architecture ( needs cuda version atleast  cuda 11.8 toolkit)
+Hopper architecture ( needs cuda version atleast, compute capability.  cuda 11.8 toolkit)
 
 https://developer.nvidia.com/cuda-gpus
 
