@@ -1,6 +1,27 @@
 # CudaExample
 Cuda Examples 
 
+Portable Batch System (PBS) and the Simple Linux Utility for Resource Management (Slurm) 
+
+sample PBS 
+qsub(queuesubmit) qstat, qdel, qalter
+
+Slurm
+
+#!/bin/bash
+#SBATCH --job-name=parallel_sum
+#SBATCH --output=job_output.txt
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=28
+#SBATCH --time=01:20:00
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=mhossain44@students.tntech.edu
+#SBATCH --account=ipdc-2018
+cd /home/CAE/sridhar
+./parallel_sum
+
+
 Performance measure for GPU:
 
 Throughput-calculated the number of floating points for second
