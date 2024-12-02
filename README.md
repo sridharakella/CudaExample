@@ -16,7 +16,7 @@ Slurm
 #SBATCH --cpus-per-task=28
 #SBATCH --time=01:20:00
 #SBATCH --mail-type=ALL
-#SBATCH --mail-user=mhossain44@students.tntech.edu
+#SBATCH --mail-user=tntech.edu
 #SBATCH --account=ipdc-2018
 cd /home/CAE/sridhar
 ./parallel_sum
